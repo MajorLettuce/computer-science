@@ -9,19 +9,78 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet"
-        href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css">
+        href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/style.min.css"
+        type="text/css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+        title="light">
+    <link rel="stylesheet alternative"
+        href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+        title="dark">
+    <style>
+        :root {
+            --global-border-radius: 4px;
+
+            --theme-color: var(--primary-color);
+
+            --code-block-border-radius: 0;
+            --code-block-padding: 1rem 1.5rem;
+
+            --code-block-border-radius: var(--global-border-radius);
+            --blockquote-border-radius: var(--global-border-radius);
+        }
+
+        pre[class*="language-"] {
+            border-left: 4px solid var(--primary-color);
+        }
+
+        pre[class*="language-"]::after {
+            content: none !important;
+        }
+    </style>
 </head>
 
 <body>
     <div id="app"></div>
     <script>
         window.$docsify = {
-            name: '',
+            loadSidebar: true,
+            subMaxLevel: 2,
+            name: 'Introduction to<br>Software Engineering',
             repo: '',
+            darklightTheme: {
+                dark: {
+                    'mono-hue': '207', // Python blue hue
+                    'mono-saturation': '25%',
+                    'primary-color': '#ffd343', // Python yellow color
+                    'code-theme-background': 'var(--mono-shade2)',
+                },
+                light: {
+                    'mono-hue': '46', // Python yellow hue
+                    'mono-saturation': '10%',
+                    'primary-color': '#3776ab', // Python blue color
+                    'code-theme-background': 'var(--mono-tint3)',
+                }
+            }
         }
     </script>
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script
+        src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <script
+        src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/main.min.js"
+        type="text/javascript">
+        </script>
+    <script
+        src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/index.min.js"
+        type="text/javascript">
+        </script>
+    <script
+        src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+    <script
+        src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
+
 </body>
 
 </html>
