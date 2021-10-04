@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Introduction to Programming</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport"
@@ -28,14 +28,23 @@
 
             --code-block-border-radius: var(--global-border-radius);
             --blockquote-border-radius: var(--global-border-radius);
+
+            --sidebar-nav-pagelink-background-image--active: var(--sidebar-active-icon);
+            --sidebar-nav-pagelink-background-image--loaded: var(--sidebar-active-icon);
         }
 
         pre[class*="language-"] {
-            border-left: 8px solid var(--primary-color);
+            border-left: 4px solid var(--primary-color);
         }
 
         pre[class*="language-"]::after {
             content: none !important;
+        }
+
+        .inline-icon {
+            height: 1rem;
+            display: inline;
+            margin-bottom: -0.2rem;
         }
     </style>
 </head>
@@ -46,20 +55,23 @@
         window.$docsify = {
             loadSidebar: true,
             subMaxLevel: 2,
-            name: 'Introduction to<br>Software Engineering',
-            repo: '',
+            homepage: 'preface.md',
+            name: 'Introduction to<br>Programming',
+            repo: 'lexuzieel/python-course',
             darklightTheme: {
                 dark: {
                     'mono-hue': '207', // Python blue hue
                     'mono-saturation': '25%',
                     'primary-color': '#ffd343', // Python yellow color
                     'code-theme-background': 'var(--mono-shade2)',
+                    'sidebar-active-icon': `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='%23ffd343' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E")`,
                 },
                 light: {
                     'mono-hue': '46', // Python yellow hue
                     'mono-saturation': '10%',
                     'primary-color': '#3776ab', // Python blue color
                     'code-theme-background': 'var(--mono-tint3)',
+                    'sidebar-active-icon': `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11.2' height='7' viewBox='0 0 11.2 7'%3E%3Cpath d='M1.5 1.5l4.1 4 4.1-4' stroke-width='1.5' stroke='%233776ab' fill='none' stroke-linecap='square' stroke-linejoin='miter' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E")`,
                 }
             }
         }
@@ -80,7 +92,8 @@
         src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
     <script
         src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
-
+    <script
+        src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 
 </html>
