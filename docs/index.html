@@ -40,6 +40,12 @@
         pre[class*="language-"]::after {
             content: none !important;
         }
+
+        .inline-icon {
+            height: 1rem;
+            display: inline;
+            margin-bottom: -0.2rem;
+        }
     </style>
 </head>
 
@@ -49,6 +55,7 @@
         window.$docsify = {
             loadSidebar: true,
             subMaxLevel: 2,
+            homepage: 'preface.md',
             name: 'Introduction to<br>Programming',
             repo: 'lexuzieel/python-course',
             darklightTheme: {
