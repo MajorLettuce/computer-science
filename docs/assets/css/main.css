@@ -41,3 +41,7 @@ pre[class*="language-"]::after {
         right: 48px;
     }
 }
+
+.mermaid {
+    text-align: center;
+}
