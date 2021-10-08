@@ -1,0 +1,33 @@
+{
+    "name": "computer-science",
+    "version": "0.0.1",
+    "description": "Introductory course to computer science",
+    "private": true,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "webpack --watch --progress",
+        "start": "webpack serve",
+        "build": "webpack"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lexuzieel/computer-science.git"
+    },
+    "keywords": [
+        "computer science",
+        "course"
+    ],
+    "author": "Aleksei Ivanov (contact@aleksei.dev)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/lexuzieel/computer-science/issues"
+    },
+    "homepage": "https://cs.aleksei.dev",
+    "devDependencies": {
+        "css-loader": "^6.3.0",
+        "style-loader": "^3.3.0",
+        "webpack": "^5.58.1",
+        "webpack-cli": "^4.9.0",
+        "webpack-dev-server": "^4.3.1"
+    }
+}
