@@ -68,6 +68,12 @@
 
     mermaid.initialize({
         startOnLoad: false,
-        theme: localStorage.getItem('DARK_LIGHT_THEME') == 'dark' ? 'dark' : 'neutral',
+        theme: (
+            localStorage.getItem('DARK_LIGHT_THEME') == 'dark' ||
+            (
+                localStorage.getItem('DARK_LIGHT_THEME') == undefined &&
+                window.matchMedia("(prefers-color-scheme: dark)").matches
+            )
+        ) ? 'dark' : 'neutral',
     });
 })()
