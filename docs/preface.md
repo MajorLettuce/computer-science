@@ -19,7 +19,7 @@ than a mere ability to write machine-readable texts.
 
 Sample python code snippet:
 
-```python
+```python:editor
 print('This is Python code')
 ```
 

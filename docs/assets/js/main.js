@@ -27,10 +27,16 @@
         markdown: {
             renderer: {
                 code: function (code, lang) {
-                    var editorSuffix = '.editor'
+                    var editorSuffix = ':editor'
 
                     if (lang.endsWith(editorSuffix)) {
                         lang = lang.substr(0, lang.length - editorSuffix.length)
+
+                        return (
+                            `<textarea class="editor" data-language="${lang}">` +
+                            code +
+                            `</textarea>`
+                        );
                     } else if (lang == "mermaid") {
                         return (
                             '<div class="mermaid" data-source="' + code + '">' +
