@@ -20,7 +20,9 @@ than a mere ability to write machine-readable texts.
 Sample python code snippet:
 
 ```python:editor
-print('This is Python code')
+for x in range(2):
+    name = input('Name: ')
+    print(f'Hello, {name}!')
 ```
 
 [Programming is technical problem-solving](https://qr.ae/pGJ50m)

@@ -3,14 +3,21 @@
 
     --theme-color: var(--primary-color);
 
-    --code-block-border-radius: 0;
-    --code-block-padding: 1rem 1.5rem;
+    --warning-color: #ffd343; /* Python yellow color */
+    --danger-color: #ab3737;
+
+    /* --code-block-border-radius: 0;
+    --code-block-padding: 1rem 1.5rem; */
 
     --code-block-border-radius: var(--global-border-radius);
     --blockquote-border-radius: var(--global-border-radius);
 
+    --code-block-background: var(--blockquote-background);
+
     --sidebar-nav-pagelink-background-image--active: var(--sidebar-active-icon);
     --sidebar-nav-pagelink-background-image--loaded: var(--sidebar-active-icon);
+
+    --pythonpad-console-border-radius: 8px;
 }
 
 pre[class*="language-"] {
@@ -45,3 +52,27 @@ pre[class*="language-"]::after {
 .mermaid {
     text-align: center;
 }
+
+/* .CodeMirror {
+    height: auto;
+    max-height: 200px;
+    padding: 1rem;
+    background-color: var(--code-block-background) !important;
+    color: var(--base-color) !important;
+} */
+
+/* .code-editor {
+    margin: 2em 0;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--code-block-border-radius);
+}
+
+.code-editor .output {
+    padding: 1rem;
+    border-top: 1px solid var(--mono-tint1);
+    background-color: var(--code-block-background) !important;
+}
+
+.code-editor .output pre {
+    margin: 0;
+} */
