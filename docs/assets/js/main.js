@@ -105,6 +105,19 @@ var footnotePlugin = (function () {
         markdown: {
             renderer: {
                 paragraph: footnotePlugin.paragraph,
+                link: function (href, title, text) {
+                    var youtubePrefix = 'youtube://';
+
+                    if (href.startsWith(youtubePrefix)) {
+                        var id = href.substr(youtubePrefix.length)
+
+                        return `<div class="youtube-embed-container">` +
+                            `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="${text}" frameborder="0" allowfullscreen></iframe>` +
+                            `</div>`
+                    }
+
+                    return this.origin.link.apply(this, arguments);
+                },
                 code: function (code, lang) {
                     var editorSuffix = ':editor'
 
