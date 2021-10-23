@@ -21,6 +21,10 @@
 
     --video-embed-border-radius: 16px;
     --video-embed-shadow: calc(3 * var(--video-embed-border-radius));
+
+    --tag-icon-fundamental-color: #649aff;
+    --tag-icon-essential-color: #d54040;
+    --tag-icon-additional-color: #79c04a;
 }
 
 pre[class*="language-"] {
@@ -121,4 +125,49 @@ pre[class*="language-"]::after {
 
 .ytp-pause-overlay {
     display: none !important;
+}
+
+a.tag {
+    padding: 0 0.5rem;
+    padding-bottom: 0.1rem;
+    border-radius: 1rem;
+    background: var(--tag-background-color);
+    position: relative;
+    text-decoration: none;
+}
+
+a.tag:hover {
+    background: var(--tag-background-color-hover);
+    text-decoration: none;
+}
+
+a.tag.has-icon {
+    padding-left: 1.5rem;
+}
+
+a.tag.has-icon::before {
+    content: "";
+    position: absolute;
+    background-color: var(--base-background-color);
+    top: 0.2rem;
+    left: 0.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+}
+
+a.tag.has-icon:hover::before {
+    filter: brightness(var(--tag-icon-hover-brightness));
+}
+
+a.tag.has-icon.fundamental::before {
+    box-shadow: inset 0 0 0 0.125rem var(--tag-icon-fundamental-color);
+}
+
+a.tag.has-icon.essential::before {
+    box-shadow: inset 0 0 0 0.125rem var(--tag-icon-essential-color);
+}
+
+a.tag.has-icon.additional::before {
+    box-shadow: inset 0 0 0 0.125rem var(--tag-icon-additional-color);
 }

@@ -76,6 +76,9 @@ var footnotePlugin = (function () {
                 'pythonpad-cm-comment': '#546e7a',
                 'pythonpad-cm-type': '#decb6b',
                 'pythonpad-cm-matchingbracket-background': 'transparent',
+                'tag-background-color': 'var(--mono-tint2)',
+                'tag-background-color-hover': 'var(--mono-tint3)',
+                'tag-icon-hover-brightness': '120%',
             },
             light: {
                 'mono-hue': '46', // Python yellow hue
@@ -100,6 +103,9 @@ var footnotePlugin = (function () {
                 'pythonpad-cm-comment': '#819ca9',
                 'pythonpad-cm-type': '#aa9a3d',
                 'pythonpad-cm-matchingbracket-background': 'var(--mono-tint1)',
+                'tag-background-color': 'var(--mono-tint2)',
+                'tag-background-color-hover': 'var(--mono-tint1)',
+                'tag-icon-hover-brightness': '90%',
             }
         },
         markdown: {
@@ -108,12 +114,29 @@ var footnotePlugin = (function () {
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
 
+                    var tagMatches = text.match(/tag(?:\.([a-z]+))?:/)
+
                     if (href.startsWith(youtubePrefix)) {
                         var id = href.substr(youtubePrefix.length)
 
                         return `<div class="youtube-embed-container">` +
                             `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="${text}" frameborder="0" allowfullscreen></iframe>` +
                             `</div>`
+                    } else if (tagMatches != null) {
+                        text = text.substr(tagMatches[0].length)
+
+                        var className = "tag"
+                        var tagTitle = ""
+
+                        var tagName = tagMatches[1]
+
+                        if (tagName != null) {
+                            className += " has-icon " + tagName;
+                            tagName = tagName.substr(0, 1).toUpperCase() + tagName.substr(1)
+                            tagTitle = `title="${tagName}"`
+                        }
+
+                        return `<a class="${className}" ${tagTitle} target="_blank" href="${href}">${text}</a>`;
                     }
 
                     return this.origin.link.apply(this, arguments);
