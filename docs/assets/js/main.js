@@ -1,3 +1,47 @@
+var footnotePlugin = (function () {
+    /**
+     * Source stacktrace:
+     * https://github.com/markedjs/marked/issues/1562#issuecomment-643171344
+     * https://github.com/markedjs/marked/issues/714#issuecomment-551275275
+     * https://github.com/markedjs/marked/issues/714
+     */
+    var footnoteMatch = /^\[\^([^\]]+)\]:([\s\S]*)$/;
+    var referenceMatch = /\[\^([^\]]+)\](?!\()/g;
+    var referencePrefix = "footnote-ref";
+    var footnotePrefix = "footnote";
+    var footnoteTemplate = function (ref, text) {
+        return `<sup id="${footnotePrefix}-${ref}">${ref}</sup>${text}`;
+    };
+    var referenceTemplate = function (ref) {
+        var link = location.hash + `?id=${footnotePrefix}-${ref}`
+        return `<sup id="${referencePrefix}-${ref}"><a href="${link}">${ref}</a></sup>`;
+    };
+    var interpolateReferences = function (text) {
+        return text.replace(referenceMatch, function (_, ref) {
+            return referenceTemplate(ref);
+        });
+    }
+    var interpolateFootnotes = function (text) {
+        return text.replace(footnoteMatch, function (_, value, text) {
+            return footnoteTemplate(value, text);
+        });
+    }
+    var renderer = {
+        paragraph(text) {
+            return marked.Renderer.prototype.paragraph.apply(null, [
+                interpolateReferences(interpolateFootnotes(text))
+            ]);
+        },
+        // text(text) {
+        //     return marked.Renderer.prototype.text.apply(null, [
+        //         interpolateReferences(interpolateFootnotes(text))
+        //     ]);
+        // },
+    };
+
+    return renderer
+})();
+
 (function () {
 
     var mermaidCounter = 1;
@@ -60,6 +104,7 @@
         },
         markdown: {
             renderer: {
+                paragraph: footnotePlugin.paragraph,
                 code: function (code, lang) {
                     var editorSuffix = ':editor'
 
