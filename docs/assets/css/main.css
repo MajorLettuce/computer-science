@@ -18,6 +18,9 @@
     --sidebar-nav-pagelink-background-image--loaded: var(--sidebar-active-icon);
 
     --pythonpad-console-border-radius: 8px;
+
+    --video-embed-border-radius: 16px;
+    --video-embed-shadow: calc(3 * var(--video-embed-border-radius));
 }
 
 pre[class*="language-"] {
