@@ -1,34 +1,32 @@
 # Preface
 
-Welcome to the introductory course on programming!
+Welcome to the introductory course on computer science!
 
 This course is my humble attempt at organizing both my own knowledge and the
 knowdledge of others freely available on the Internet as a guide for the people
-who are just stepping onto their path to learn programming.
+who are just stepping onto their path to learn computer science and programming.
 
-In order to teach basic concepts of programming I will be using
-<a href="https://python.org" target="_blank">Python
-<img class="inline-icon" src="/assets/icons/python.svg">
-language</a>
-since it is one of the easiest languages to start with for those without prior
-knowledge in writing programs.
+The aim of this course is not to teach a specific programming language, but
+rather the fundamental concepts of computer science and programming
+_(not coding!)_.
+You will understand the universal principles of how computers work, regardless
+of whether they are electronic or not and whether they work with the binary
+numbers or some other method of representing information.
 
-The aim of this course is not, however, to teach the language itself but rather
-the fundamental concepts of programming _(not coding!)_ which is a much wider concept
-than a mere ability to write machine-readable texts.
+Throughout the course you will see tags like these
+[tag:computer science](https://en.wikipedia.org/wiki/Computer_science) that will
+link to a more detailed description of the term. To avoid overwhelming you with
+the wealth of new concepts and topics, I have split tags into categories, each
+one denoted with a specific color:
 
-Sample python code snippet:
+[tag.fundamental:Fundamental](#) ideas are the foundation of what computer
+science deals with in a broad sense.
 
-```python:editor
-for x in range(2):
-    name = input('Name: ')
-    print(f'Hello, {name}!')
-```
+[tag.essential:Essential](#) concepts are required in order to understand how
+computers work and how to use them.
 
-[Programming is technical problem-solving](https://qr.ae/pGJ50m)
+[tag.supplemental:Supplemental](#) material is not strictly required and is
+provided to help build a more complete picture, allowing you to dig deeper on
+your own.
 
-### References
-
-> [1] _Computer programming_ (Wikipedia) https://en.wikipedia.org/wiki/Computer_programming
->
-> [2] _Introduction to Programming in Python._ Available: https://introcs.cs.princeton.edu/python/home
+Hopefully this will make learning more structured and more enjoyable for you!
