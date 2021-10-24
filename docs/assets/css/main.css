@@ -152,6 +152,7 @@ a.tag.has-style-icon::before {
     padding-top: 1rem;
     padding-left: 1rem;
     border-radius: 1rem;
+    box-shadow: inset 0 0 0 0.125rem var(--base-color);
 }
 
 a.tag.has-style-icon:hover::before {
