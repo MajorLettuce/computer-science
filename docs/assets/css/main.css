@@ -138,11 +138,12 @@ a.tag:hover {
     text-decoration: none;
 }
 
-a.tag.has-icon {
+a.tag.has-style-icon,
+a.tag.has-image-icon {
     padding-left: 1.5rem;
 }
 
-a.tag.has-icon::before {
+a.tag.has-style-icon::before {
     content: "";
     position: absolute;
     background-color: var(--base-background-color);
@@ -153,18 +154,29 @@ a.tag.has-icon::before {
     border-radius: 1rem;
 }
 
-a.tag.has-icon:hover::before {
+a.tag.has-style-icon:hover::before {
     filter: brightness(var(--tag-icon-hover-brightness));
 }
 
-a.tag.has-icon.fundamental::before {
+a.tag.has-style-icon.fundamental::before {
     box-shadow: inset 0 0 0 0.125rem var(--tag-icon-fundamental-color);
 }
 
-a.tag.has-icon.essential::before {
+a.tag.has-style-icon.essential::before {
     box-shadow: inset 0 0 0 0.125rem var(--tag-icon-essential-color);
 }
 
-a.tag.has-icon.additional::before {
+a.tag.has-style-icon.additional::before {
     box-shadow: inset 0 0 0 0.125rem var(--tag-icon-additional-color);
+}
+
+a.tag.has-image-icon img {
+    position: absolute;
+    width: 1rem;
+    top: 0.2rem;
+    left: 0.25rem;
+}
+
+a.tag.has-image-icon:hover img {
+    filter: brightness(var(--tag-icon-hover-brightness));
 }

@@ -118,7 +118,7 @@ var footnotePlugin = (function () {
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
 
-                    var tagMatches = text.match(/tag(?:\.([a-z]+))?:/)
+                    var tagMatches = text.match(/tag(?:\.([a-z]+\/)?([a-z]+))?:/)
 
                     if (href.startsWith(youtubePrefix)) {
                         var id = href.substr(youtubePrefix.length)
@@ -132,15 +132,25 @@ var footnotePlugin = (function () {
                         var className = "tag"
                         var tagTitle = ""
 
-                        var tagName = tagMatches[1]
+                        var tagType = tagMatches[1] || 'style'
+                        var tagName = tagMatches[2]
+                        var imageIcon = ''
 
                         if (tagName != null) {
-                            className += " has-icon " + tagName;
-                            tagName = tagName.substr(0, 1).toUpperCase() + tagName.substr(1)
-                            tagTitle = `title="${tagName}"`
+                            if (tagType == 'style') {
+                                className += " has-style-icon " + tagName;
+                                tagName = tagName.substr(0, 1).toUpperCase() + tagName.substr(1)
+                                tagTitle = `title="${tagName}"`
+                            } else {
+                                className += " has-image-icon";
+                                imageIcon = `<img src="/assets/icons/${tagName}.svg">`
+                            }
                         }
 
-                        return `<a class="${className}" ${tagTitle} target="_blank" href="${href}">${text}</a>`;
+                        return `<a class="${className}" ${tagTitle} target="_blank" href="${href}">` +
+                            imageIcon +
+                            text +
+                            `</a>`;
                     }
 
                     return this.origin.link.apply(this, arguments);
