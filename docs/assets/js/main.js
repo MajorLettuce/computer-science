@@ -109,7 +109,7 @@ var footnotePlugin = (function () {
                 'pythonpad-cm-matchingbracket-background': 'var(--mono-tint1)',
                 'tag-background-color': 'var(--mono-tint2)',
                 'tag-background-color-hover': 'var(--mono-tint1)',
-                'tag-icon-hover-brightness': '90%',
+                'tag-icon-hover-brightness': '100%',
             }
         },
         markdown: {
