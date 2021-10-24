@@ -174,8 +174,10 @@ a.tag.has-style-icon.supplemental::before {
 a.tag.has-image-icon img {
     position: absolute;
     width: 1rem;
-    top: 0.2rem;
     left: 0.25rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 a.tag.has-image-icon:hover img {
