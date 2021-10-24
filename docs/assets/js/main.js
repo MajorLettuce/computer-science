@@ -44,10 +44,32 @@ var footnotePlugin = (function () {
 
 (function () {
 
+    // var editors = [];
     var mermaidCounter = 1;
+
+    // function getEditorSourceHash(path, id, salt = '') {
+    //     return objectHash.sha1({
+    //         salt: salt,
+    //         path: path,
+    //         id: id,
+    //     })
+    // }
+
+    // function runCodeInEditor(editorId) {
+    //     try {
+    //         brython({
+    //             debug: 1,
+    //             ids: [`editor_source_${editorId}`],
+    //         })
+    //     } catch (e) {
+    //         console.log(e)
+    //         // alert(e)
+    //     }
+    // }
 
     window.$docsify = {
         loadSidebar: true,
+        // routerMode: 'history',
         subMaxLevel: 2,
         homepage: 'preface.md',
         name: 'Introduction to<br>Computer Science',
@@ -213,6 +235,63 @@ var footnotePlugin = (function () {
                             src: $(element).data('source')
                         })
                     })
+
+                    // $('script.editor-source').remove()
+
+                    // var editorCounter = 1;
+
+                    // editors = $('textarea.editor').map(
+                    //     function (index, element) {
+                    //         var language = $(element).data('language')
+
+                    //         var editor = CodeMirror.fromTextArea(element, {
+                    //             theme: localStorage.getItem('DARK_LIGHT_THEME') == 'dark' ? 'dark' : 'light',
+                    //             mode: language,
+                    //         })
+
+                    //         // var editorId = `editor_${editorCounter}`
+                    //         // element.id = editorId
+                    //         // setInterval(() => {
+                    //         //     editor.save()
+                    //         // }, 1000)
+
+                    //         var editorHash = getEditorSourceHash(
+                    //             vm.route.path,
+                    //             editorCounter,
+                    //             editor.doc.getValue()
+                    //         )
+
+                    //         editor.id = editorHash
+
+                    //         // $(element).data('editor-id', editorCounter)
+
+                    //         var script = document.createElement('script');
+                    //         script.className = 'editor-source'
+                    //         script.id = `editor_source_${editorHash}`;
+                    //         script.type = 'text/python';
+                    //         script.text = editor.doc.getValue();
+
+                    //         $("body").append(script);
+
+                    //         CodeMirror.on(editor, 'change', function (instance) {
+                    //             script.text = instance.doc.getValue()
+                    //         })
+
+                    //         editor.setOption("extraKeys", {
+                    //             'Ctrl-Enter': function (cm) {
+                    //                 runCodeInEditor(cm.id)
+                    //             }
+                    //         });
+
+                    //         editorCounter++
+
+                    //         // console.log(editor.getTextArea())
+                    //         return editor
+                    //     }
+                    // )
+
+                    // editors.on('')
+                    // console.log(editors)
                 })
             }
         ]
