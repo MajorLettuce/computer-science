@@ -1,8 +1,14 @@
 ## Table of Contents
 
-### Part 1. Fundamentals
-- [Part 1. Coding](/chapters/1/introduction)
-- [Chapter 1. Writing Programs (coding)](/chapters/1/introduction)
+### [Part 1. Introduction](/part/1/section/1)
+- [What is Computer Science](/part/1/section/1)
+- What is Information
+- Encoding Information
+- Binary Numeral System
+- Formal Logic
+
+### Part 2. Writing software
+- Chapter 1. Writing Programs
   - Part 1. Programming language
     - Chapter 1. Variables
     - Chapter 2. Data Types
