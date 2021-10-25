@@ -3,7 +3,7 @@
 Welcome to the introductory course on computer science!
 
 This course is my humble attempt at organizing both my own knowledge and the
-knowdledge of others freely available on the Internet as a guide for the people
+knowledge of others freely available on the Internet as a guide for the people
 who are just stepping onto their path to learn computer science and programming.
 
 The aim of this course is not to teach a specific programming language, but
