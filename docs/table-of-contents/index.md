@@ -2,10 +2,10 @@
 
 ### [Part 1. Introduction](/part/1/section/1)
 - [What is Computer Science](/part/1/section/1)
-- What is Information
-- Encoding Information
-- Binary Numeral System
-- Formal Logic
+- [What is Information](/part/1/section/2)
+- [Encoding Information](/part/1/section/3)
+- [Binary Number System](/part/1/section/4)
+- [Propositional Logic](/part/1/section/5)
 
 ### Part 2. Writing software
 - Chapter 1. Writing Programs
