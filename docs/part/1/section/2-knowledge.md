@@ -1,19 +1,18 @@
-# Types of Knowledge
+# What is Knowledge
 
-There are two types of knowledge:
+Knowlege can be divided into two types:
 - **Declarative** knowledge - knowledge of particular facts:
   `I know that 1+1 equals 2`
 - **Procedural** knowledge - knowing *how* to do something:
   `I know how to calculate 1+1`
 
 Computer science deals with the procedural knowledge, studying how to build the
-machines that can make use of this type of knowledge. To this day there is no an
-[tag:ultimate answer to everything](https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy)
+machines that can make use of this type of knowledge. To this day there is no
+[ultimate answer to everything](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker's_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42))
 which not only shows the limits of our current computers, but the limits of
-knowledge of the humanity as well[^1]. Thus for the time being we will focus
-only on the practical aspects of knowledge, not the philosophical ones.
-
-<!-- (even though it is of great importance to keep your mind open in this regard). -->
+knowledge of the humanity as well[^1]. However for the time being we will focus
+only on the practical aspects of knowledge - that is how to build machines and
+write programs that are able to give answers for the questions you provide.
 
 [Declarative vs. procedural knowledge (Turing test)](youtube://QxZFKN9OEpY)
 
@@ -32,19 +31,40 @@ the right:
 [tag.fundamental:Procedural knowledge](https://en.wikipedia.org/wiki/Procedural_knowledge),
 on the other hand, provides the means  to get the answer for multiple similar
 questions without memorizing all the combinations. Instead, it provides an
-[tag.essential:algorithm](https://en.wikipedia.org/wiki/Algorithm) to get the
-answers for a set of questions by following a common set of instructions or a
-mathematical forumla:
+**algorithm** to get the answers for a set of questions by following a common
+set of instructions or a mathematical formula:
 
 $
 f(x) = x + 1
 $
 
+This formula describes an *infinite* amount of answers to each corresponding
+question of type `what N + 1 equals to?`. It can be said that the procedural
+knowledge was encoded in the equation above.
+
+Any somewhat complex computer program includes procedural knowledge in one way
+or another. That procedural knowledge is encoded as an [tag.essential:algorithm](https://en.wikipedia.org/wiki/Algorithm)
+
+[What is an Algorithm?](youtube://AVScy7YsKM0)
+
 > **Key takeaways**
 >
-> - Knowledge can be gained through questions.
+> - Knowledge is usually acquired through questions.
+> - [tag:Turing test](https://en.wikipedia.org/wiki/Turing_test) is a test of
+>   machine's ability to behave intelligently in the same way humans do.
+> - Procedural knowledge can be stored as an
+>   [tag:algorithm](https://en.wikipedia.org/wiki/Algorithm) inside a machine.
+> - Any algorithm consists of:
+>   1) A sequence of steps
+>   2) Conditional statements
 
-[^1]: This topic goes well beyond computer science and thus I will have to stop
-here, for it is possible to talk about the concepts of knowledge, information
-and their connection to the human mind  for a long time on a cozy evening with
-friend at a warm cup of tea.
+[^1]:
+    This topic goes well beyond computer science and thus I will have to stop
+    here, for it is possible to talk about the concepts of knowledge, information
+    and their connection to the human mind for a long time on a cozy evening with
+    friend at a warm cup of tea, but it deters from the aim of this course.
+
+[^Video 1]: Art of the Problem. _Declarative vs. procedural knowledge (Turing test)_
+[tag.image/youtube:Open Playlist](https://www.youtube.com/playlist?list=PLbg3ZX2pWlgI_ej6ZhGd45-cPoWLZD9pT)
+
+[^Video 2]: Art of the Problem. _What is an Algorithm?_
