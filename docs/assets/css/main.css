@@ -6,6 +6,8 @@
     /* --code-block-border-radius: 0;
     --code-block-padding: 1rem 1.5rem; */
 
+    --table-cell-padding: 0.25em 0.5em;
+
     --code-block-border-radius: var(--global-border-radius);
     --blockquote-border-radius: var(--global-border-radius);
 
@@ -187,4 +189,9 @@ a.tag.has-image-icon:hover img {
 .table-wrapper table {
     width: auto !important;
     margin: auto;
+}
+
+.katex {
+    display: block;
+    text-align: center;
 }
