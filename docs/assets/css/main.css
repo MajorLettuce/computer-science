@@ -183,3 +183,8 @@ a.tag.has-image-icon img {
 a.tag.has-image-icon:hover img {
     filter: brightness(var(--tag-icon-hover-brightness));
 }
+
+.table-wrapper table {
+    width: auto !important;
+    margin: auto;
+}
