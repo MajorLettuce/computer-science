@@ -54,7 +54,7 @@ limitations of computers?".
 
 > **Key takeaways**
 >
-> - Knowledge is usually acquired through questions.
+> - One of the ways to acquire knowledge is through questions.
 > - [tag:Turing test](https://en.wikipedia.org/wiki/Turing_test) is a test of
 >   machine's ability to behave intelligently in the same way humans do.
 > - Procedural knowledge can be stored as an
