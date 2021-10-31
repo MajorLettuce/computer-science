@@ -32,11 +32,13 @@ var footnotePlugin = (function () {
                 interpolateReferences(interpolateFootnotes(text))
             ]);
         },
-        // text(text) {
-        //     return marked.Renderer.prototype.text.apply(null, [
-        //         interpolateReferences(interpolateFootnotes(text))
-        //     ]);
-        // },
+        list(text, ordered, start) {
+            return marked.Renderer.prototype.list.apply(null, [
+                interpolateReferences(interpolateFootnotes(text)),
+                ordered,
+                start
+            ]);
+        },
     };
 
     return renderer
@@ -48,6 +50,7 @@ var footnotePlugin = (function () {
 
     window.$docsify = {
         loadSidebar: true,
+        auto2top: true,
         subMaxLevel: 2,
         homepage: 'preface.md',
         name: 'Introduction to<br>Computer Science',
@@ -114,6 +117,7 @@ var footnotePlugin = (function () {
         },
         markdown: {
             renderer: {
+                list: footnotePlugin.list,
                 paragraph: footnotePlugin.paragraph,
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
