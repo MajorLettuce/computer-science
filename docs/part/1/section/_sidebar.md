@@ -2,8 +2,4 @@
 - [Part 1. Introduction]()
   - [What is Computer Science](/part/1/section/1)
   - [What is Knowledge](/part/1/section/2-knowledge)
-  - [What is Information](/part/1/section/2)
-  - [Encoding Information](/part/1/section/3)
-  - [Binary Number System](/part/1/section/4)
-  - [Propositional Logic](/part/1/section/5)
 - [Table of Contents](/table-of-contents/index)
