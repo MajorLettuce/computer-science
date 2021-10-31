@@ -47,6 +47,11 @@ or another. That procedural knowledge is encoded as an [tag.essential:algorithm]
 
 [What is an Algorithm?](youtube://AVScy7YsKM0)
 
+[tag.supplemental:Theory of computation](https://en.wikipedia.org/wiki/Theory_of_computation)
+is the branch that deals with what problems can be solved using an algorithm and
+tries to answer the question: "What are the fundamental capabilities and
+limitations of computers?".
+
 > **Key takeaways**
 >
 > - Knowledge is usually acquired through questions.
