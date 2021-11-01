@@ -193,8 +193,3 @@ a.tag.has-image-icon:hover img {
     width: auto !important;
     margin: auto;
 }
-
-.katex {
-    display: block;
-    text-align: center;
-}
