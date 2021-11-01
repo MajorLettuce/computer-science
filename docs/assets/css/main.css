@@ -99,7 +99,9 @@ pre[class*="language-"]::after {
     height: 100%;
     margin: 0;
     border-radius: var(--video-embed-border-radius);
-    animation: video-embed-shadow-animation 3s ease-in-out infinite;
+    box-shadow: 0px calc(var(--video-embed-shadow) / 3)
+        var(--video-embed-shadow) calc(0 * var(--video-embed-shadow))
+        var(--mono-tint1);
 }
 
 @keyframes video-embed-shadow-animation {
