@@ -189,6 +189,11 @@ a.tag.has-image-icon:hover img {
     filter: brightness(var(--tag-icon-hover-brightness));
 }
 
+a.tag.has-fa-icon .fa {
+    margin-left: -0.25rem;
+    margin-right: 0.25rem;
+}
+
 .table-wrapper table {
     width: auto !important;
     margin: auto;

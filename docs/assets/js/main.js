@@ -141,10 +141,15 @@ var footnotePlugin = (function () {
                         var imageIcon = ''
 
                         if (tagName != null) {
+                            tagType = tagType.replace(/\/$/, '')
+
                             if (tagType == 'style') {
                                 className += " has-style-icon " + tagName;
                                 tagName = tagName.substr(0, 1).toUpperCase() + tagName.substr(1)
                                 tagTitle = `title="${tagName}"`
+                            } else if (tagType == 'fa') {
+                                className += " has-fa-icon";
+                                imageIcon = `<i class="fa fa-${tagName}"></i>`
                             } else {
                                 className += " has-image-icon";
                                 imageIcon = `<img src="/assets/icons/${tagName}.svg">`
