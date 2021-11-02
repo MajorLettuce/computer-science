@@ -202,16 +202,6 @@ var footnotePlugin = (function () {
                         });
                     })
 
-                    $('#docsify-darklight-theme').on('mouseup', function (e) {
-                        for (var editor of editors) {
-                            console.log(editor)
-                            editor.setOption(
-                                'theme',
-                                localStorage.getItem('DARK_LIGHT_THEME') == 'light' ? 'dark' : 'light'
-                            )
-                        }
-                    })
-
                     $('.pythonpad-container').each(function (index, element) {
                         Pythonpad(element.id, {
                             src: $(element).data('source')
