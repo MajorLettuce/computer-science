@@ -165,12 +165,33 @@ var footnotePlugin = (function () {
                     if (lang.endsWith(editorSuffix)) {
                         lang = lang.substr(0, lang.length - editorSuffix.length)
 
+                        var chunks = code.split(/#\s*(?:([\S]+)\s)?\s*file:\s*([\S]+)\s+/)
+                        code = chunks.shift()
+
                         var hash = objectHash.sha1({
                             lang: lang,
                             code: code
                         })
 
-                        return `<div id="pythonpad_${hash}" class="pythonpad-container" data-language="${lang}" data-source="${code}"></div>`
+                        var files = {}
+
+                        while (chunks.length > 0) {
+                            var type = chunks.shift()
+                            var name = chunks.shift()
+
+                            if (['text', 'base64'].includes(type) == false) {
+                                type = 'text'
+                            }
+
+                            files[name] = {
+                                type: type,
+                                body: chunks.shift().trim(),
+                            }
+                        }
+
+                        files = btoa(JSON.stringify(files))
+
+                        return `<div id="pythonpad_${hash}" class="pythonpad-container" data-language="${lang}" data-source="${code}" data-files="${files}"></div>`
                     } else if (lang == "mermaid") {
                         return (
                             '<div class="mermaid" data-source="' + code + '">' +
@@ -203,8 +224,11 @@ var footnotePlugin = (function () {
                     })
 
                     $('.pythonpad-container').each(function (index, element) {
+                        var files = JSON.parse(atob($(element).data('files')))
+
                         Pythonpad(element.id, {
-                            src: $(element).data('source')
+                            src: $(element).data('source'),
+                            files: files,
                         })
                     })
                 })
