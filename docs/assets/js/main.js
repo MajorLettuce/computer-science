@@ -46,6 +46,7 @@ var footnotePlugin = (function () {
 
 (function () {
 
+    var editorCounter = 1;
     var mermaidCounter = 1;
 
     window.$docsify = {
@@ -174,6 +175,7 @@ var footnotePlugin = (function () {
                         code = chunks.shift()
 
                         var hash = objectHash.sha1({
+                            editorCounter: editorCounter++,
                             lang: lang,
                             code: code
                         })
@@ -227,6 +229,8 @@ var footnotePlugin = (function () {
                             theme: localStorage.getItem('DARK_LIGHT_THEME') == 'dark' ? 'dark' : 'neutral',
                         });
                     })
+
+                    editorCounter = 1;
 
                     $('.pythonpad-container').each(function (index, element) {
                         var files = JSON.parse(atob($(element).data('files')))
