@@ -236,7 +236,7 @@
 }
 
 .Pythonpad .columns .output-column .console .console-text.system {
-    color: var(--base-color);
+    opacity: 0.33;
 }
 
 .Pythonpad .columns .output-column .console .console-text.error {
