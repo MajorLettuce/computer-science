@@ -4,4 +4,5 @@
   - [What is Knowledge](/part/1/section/2)
   - [What is Logic](/part/1/section/3)
   - [Formal Logic](/part/1/section/4)
+  - [Truth Tables](/part/1/section/5)
 - [Table of Contents](/table-of-contents/index)
