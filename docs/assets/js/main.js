@@ -61,6 +61,7 @@ var footnotePlugin = (function () {
                 'mono-hue': '207', // Python blue hue
                 'mono-saturation': '25%',
                 'primary-color': '#ffd343', // Python yellow color
+                'primary-complementary-color': '#3776ab',
                 'warning-color': '#ffd343', // Python yellow color
                 'danger-color': '#bd3a3a',
                 'code-theme-background': 'var(--mono-shade2)',
@@ -91,6 +92,7 @@ var footnotePlugin = (function () {
                 'mono-hue': '46', // Python yellow hue
                 'mono-saturation': '10%',
                 'primary-color': '#3776ab', // Python blue color
+                'primary-complementary-color': '#ffd343',
                 'warning-color': '#ffd343', // Python yellow color
                 'danger-color': '#ab3737',
                 'code-theme-background': 'var(--mono-tint3)',
