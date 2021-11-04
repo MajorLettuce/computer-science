@@ -7,4 +7,5 @@
   - [Truth Tables](/part/1/section/5)
   - [What is Information](/part/1/section/6)
   - [Signals and Symbols](/part/1/section/7)
+  - [Encoding Information](/part/1/section/8)
 - [Table of Contents](/table-of-contents/index)
