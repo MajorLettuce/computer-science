@@ -63,7 +63,7 @@
 
         window.addEventListener('hashchange', function (e) {
             window.goatcounter.count({
-                path: location.pathname + location.search + location.hash,
+                path: location.hash.substr(1),
             })
         })
     </script>
