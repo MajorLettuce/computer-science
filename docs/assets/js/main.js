@@ -127,7 +127,7 @@ var footnotePlugin = (function () {
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
 
-                    var tagMatches = text.match(/tag(?:\.([a-z]+\/)?([a-z]+))?:/)
+                    var tagMatches = text.match(/tag(?:\.(\S+\/)?(\S+))?:/)
 
                     if (href.startsWith(youtubePrefix)) {
                         var id = href.substr(youtubePrefix.length)
