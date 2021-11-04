@@ -58,6 +58,18 @@
         src="//unpkg.com/docsify-plantuml/dist/docsify-plantuml.min.js"></script>
     <script
         src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script>
+        window.goatcounter = { no_onload: true }
+
+        window.addEventListener('hashchange', function (e) {
+            window.goatcounter.count({
+                path: location.hostname + location.pathname + location.search + location.hash,
+            })
+        })
+    </script>
+    <script data-goatcounter="https://aleksei.goatcounter.com/count" async
+        src="//gc.zgo.at/count.js"></script>
+
 </body>
 
 </html>
