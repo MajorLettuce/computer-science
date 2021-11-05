@@ -221,6 +221,15 @@ var footnotePlugin = (function () {
         plugins: [
             function (hook, vm) {
                 hook.doneEach(function () {
+                    if (
+                        window.goatcounter.count &&
+                        location.hostname == 'cs.aleksei.dev'
+                    ) {
+                        window.goatcounter.count({
+                            path: location.hash.substr(1),
+                        })
+                    }
+
                     $('#docsify-darklight-theme').on('click', function (e) {
                         for (var block of $('.mermaid')) {
                             $(block).html(mermaid.render(
@@ -260,3 +269,5 @@ var footnotePlugin = (function () {
         ) ? 'dark' : 'neutral',
     });
 })()
+
+window.goatcounter = { no_onload: true }
