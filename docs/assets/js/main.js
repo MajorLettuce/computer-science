@@ -125,12 +125,32 @@ var footnotePlugin = (function () {
                 list: footnotePlugin.list,
                 paragraph: footnotePlugin.paragraph,
                 image: function (href, title, text) {
+                    let parsedMetadata = {}
+
+                    try {
+                        parsedMetadata = jsyaml.load(text)
+                    } catch (error) {
+                        parsedMetadata.title = text
+                    }
+
                     return `<p class="image-embed">` +
                         `<a href="${href}" target="_blank">` +
                         `<img src="${href}" alt="${text}"/>` +
-                        (text ? `<span class="title">${text}</span>` : '') +
                         `</a>` +
-                        `</p>`
+                        (parsedMetadata.title ? `<span class="title">` +
+                            parsedMetadata.title +
+                            (parsedMetadata.source && parsedMetadata.source.name ?
+                                ` (Source: ` +
+                                (parsedMetadata.source.url ?
+                                    `<a href="${parsedMetadata.source.url}" target="_blank">` +
+                                    parsedMetadata.source.name +
+                                    `</a>` : parsedMetadata.source.name
+                                ) +
+                                `)` : ''
+                            ) +
+                            `</span>` : ''
+                        ) +
+                        `</p > `
                 },
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
