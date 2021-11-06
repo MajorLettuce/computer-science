@@ -124,6 +124,14 @@ var footnotePlugin = (function () {
             renderer: {
                 list: footnotePlugin.list,
                 paragraph: footnotePlugin.paragraph,
+                image: function (href, title, text) {
+                    return `<p class="image-embed">` +
+                        `<a href="${href}" target="_blank">` +
+                        `<img src="${href}" alt="${text}"/>` +
+                        (text ? `<span class="title">${text}</span>` : '') +
+                        `</a>` +
+                        `</p>`
+                },
                 link: function (href, title, text) {
                     var youtubePrefix = 'youtube://';
 

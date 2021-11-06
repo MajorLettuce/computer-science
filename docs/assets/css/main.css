@@ -83,6 +83,22 @@ pre[class*="language-"]::after {
     margin: 0;
 } */
 
+.image-embed {
+    text-align: center;
+}
+
+.image-embed img {
+    max-width: 60% !important;
+    border-radius: var(--video-embed-border-radius);
+    box-shadow: 0px calc(var(--video-embed-shadow) / 3)
+        var(--video-embed-shadow) calc(0 * var(--video-embed-shadow))
+        var(--mono-tint1);
+}
+
+.image-embed .title {
+    display: block;
+}
+
 .youtube-embed-container {
     position: relative;
     width: 100%;
