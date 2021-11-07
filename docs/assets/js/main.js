@@ -181,7 +181,7 @@ var footnotePlugin = (function () {
                         }
 
                         return `<div class="youtube-embed-container">` +
-                            `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0${timestamps}" title="${parsedMetadata.name}" frameborder="0" allowfullscreen></iframe>` +
+                            `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0${timestamps}&color=white" title="${parsedMetadata.name}" frameborder="0" allowfullscreen></iframe>` +
                             `</div>`
                     } else if (tagMatches != null) {
                         text = text.substr(tagMatches[0].length)
