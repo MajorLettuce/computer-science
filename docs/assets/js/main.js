@@ -160,8 +160,28 @@ var footnotePlugin = (function () {
                     if (href.startsWith(youtubePrefix)) {
                         var id = href.substr(youtubePrefix.length)
 
+                        var parsedMetadata = {
+                            name: text
+                        }
+
+                        var timestamps = ""
+
+                        try {
+                            parsedMetadata = jsyaml.load(text)
+
+                            if (parsedMetadata.start) {
+                                timestamps += `&start=${parsedMetadata.start}`
+                            }
+
+                            if (parsedMetadata.end) {
+                                timestamps += `&end=${parsedMetadata.end}`
+                            }
+                        } catch (error) {
+                            //
+                        }
+
                         return `<div class="youtube-embed-container">` +
-                            `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0" title="${text}" frameborder="0" allowfullscreen></iframe>` +
+                            `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0${timestamps}" title="${parsedMetadata.name}" frameborder="0" allowfullscreen></iframe>` +
                             `</div>`
                     } else if (tagMatches != null) {
                         text = text.substr(tagMatches[0].length)
