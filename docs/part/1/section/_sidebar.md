@@ -9,4 +9,5 @@
   - [Signals and Symbols](/part/1/section/7)
   - [What is Code](/part/1/section/8)
   - [Encoding Information](/part/1/section/9)
+  - [What is a Bit](/part/1/section/10)
 - [Table of Contents](/table-of-contents/index)
