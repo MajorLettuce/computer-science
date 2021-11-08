@@ -35,5 +35,3 @@ Hopefully this will make learning more structured and more enjoyable for you!
 > [tag.fa/github:open an issue](https://github.com/lexuzieel/computer-science/issues)
 > or
 > [tag.fa/at:contact me](mailto:contact@aleksei.dev) directly.
->
-> -- Aleksei
