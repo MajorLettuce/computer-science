@@ -120,6 +120,7 @@ pre[class*="language-"]::after {
     width: 100%;
     height: 100%;
     margin: 0;
+    border-radius: var(--video-embed-border-radius);
 }
 
 @keyframes video-embed-shadow-animation {
