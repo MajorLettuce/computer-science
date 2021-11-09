@@ -228,6 +228,7 @@ var footnotePlugin = (function () {
 
                         var hash = objectHash.sha1({
                             editorCounter: editorCounter++,
+                            path: location.hash,
                             lang: lang,
                             code: code
                         })
