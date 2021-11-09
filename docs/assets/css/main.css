@@ -89,6 +89,7 @@ pre[class*="language-"]::after {
 
 .image-embed img {
     max-width: 60% !important;
+    max-height: 25rem;
     border-radius: var(--video-embed-border-radius);
     box-shadow: 0px calc(var(--video-embed-shadow) / 3)
         var(--video-embed-shadow) calc(0 * var(--video-embed-shadow))
