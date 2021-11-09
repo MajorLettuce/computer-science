@@ -12,3 +12,4 @@
   - [What is a Bit](/part/1/section/10)
   - [Binary Numeral System](/part/1/section/11)
 - [Table of Contents](/table-of-contents/index)
+- [Scratchpad](/scratchpad)
