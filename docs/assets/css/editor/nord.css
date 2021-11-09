@@ -1,0 +1,119 @@
+/*
+  Name:       material
+  Author:     Mattia Astorino (http://github.com/equinusocio)
+  Website:    https://material-theme.site/
+*/
+
+.cm-s-nord.CodeMirror {
+    /* background-color: #263238 !important; */
+    color: var(--base-color) !important;
+}
+
+/* .cm-s-nord .CodeMirror-gutters {
+    background: #263238 !important;
+    color: #546e7a !important;
+    border: none !important;
+} */
+
+/* .cm-s-nord .CodeMirror-guttermarker,
+.cm-s-nord .CodeMirror-guttermarker-subtle,
+.cm-s-nord .CodeMirror-linenumber {
+    color: #546e7a !important;
+} */
+
+.cm-s-nord .CodeMirror-cursor {
+    border-left: 1px solid var(--primary-color) !important;
+}
+/* .cm-s-nord.cm-fat-cursor .CodeMirror-cursor {
+    background-color: #5d6d5c80 !important;
+}
+.cm-s-nord .cm-animate-fat-cursor {
+    background-color: #5d6d5c80 !important;
+} */
+
+.cm-s-nord div.CodeMirror-selected {
+    background: var(--pythonpad-cm-selection) !important;
+}
+
+.cm-s-nord.CodeMirror-focused div.CodeMirror-selected {
+    background: var(--pythonpad-cm-selection) !important;
+}
+
+/* .cm-s-nord .CodeMirror-line::selection,
+.cm-s-nord .CodeMirror-line > span::selection,
+.cm-s-nord .CodeMirror-line > span > span::selection {
+    background: rgba(128, 203, 196, 0.2) !important;
+}
+
+.cm-s-nord .CodeMirror-line::-moz-selection,
+.cm-s-nord .CodeMirror-line > span::-moz-selection,
+.cm-s-nord .CodeMirror-line > span > span::-moz-selection {
+    background: rgba(128, 203, 196, 0.2) !important;
+} */
+
+/* .cm-s-nord .CodeMirror-activeline-background {
+    background: rgba(0, 0, 0, 0.5) !important;
+} */
+
+.cm-s-nord .cm-property,
+.cm-s-nord .cm-attribute,
+.cm-s-nord .cm-keyword {
+    color: var(--pythonpad-cm-keyword) !important;
+}
+
+.cm-s-nord .cm-operator {
+    color: var(--pythonpad-cm-operator) !important;
+}
+
+.cm-s-nord .cm-variable-2 {
+    color: var(--pythonpad-cm-variable-2) !important;
+}
+
+.cm-s-nord .cm-variable-3,
+.cm-s-nord .cm-variable,
+.cm-s-nord .cm-string-2,
+.cm-s-nord .cm-type {
+    color: var(--pythonpad-cm-variable) !important;
+}
+
+.cm-s-nord .cm-builtin,
+.cm-s-nord .cm-meta {
+    color: var(--pythonpad-cm-builtin) !important;
+}
+
+.cm-s-nord .cm-atom {
+    color: var(--pythonpad-cm-atom) !important;
+}
+
+.cm-s-nord .cm-number,
+.cm-s-nord .cm-tag {
+    color: var(--pythonpad-cm-number) !important;
+}
+
+.cm-s-nord .cm-def {
+    color: var(--pythonpad-cm-def) !important;
+}
+
+.cm-s-nord .cm-string {
+    color: var(--pythonpad-cm-string) !important;
+}
+
+.cm-s-nord .cm-comment {
+    color: var(--pythonpad-cm-comment) !important;
+}
+
+.cm-s-nord .cm-variable-3,
+.cm-s-nord .cm-qualifier,
+.cm-s-nord .cm-type {
+    color: var(--pythonpad-cm-type) !important;
+}
+
+.cm-s-nord .cm-error {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: var(--pythonpad-cm-number) !important;
+}
+
+.cm-s-nord .CodeMirror-matchingbracket {
+    text-decoration: underline !important;
+    background: var(--pythonpad-cm-matchingbracket-background) !important;
+}

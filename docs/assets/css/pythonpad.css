@@ -1,0 +1,286 @@
+:root {
+    --pythonpad-cm-comment: #4c566a;
+    --pythonpad-cm-atom: #b48ead;
+    --pythonpad-cm-number: #b48ead;
+
+    --pythonpad-cm-comment-cm-attribute: #97b757;
+    --pythonpad-cm-comment-cm-def: #bc9262;
+    --pythonpad-cm-comment-cm-tag: #bc6283;
+    --pythonpad-cm-comment-cm-type: #5998a6;
+
+    --pythonpad-cm-property: #8fbcbb;
+    --pythonpad-cm-keyword: #81a1c1;
+    --pythonpad-cm-builtin: #81a1c1;
+    --pythonpad-cm-string: #a3be8c;
+
+    --pythonpad-cm-variable: #d8dee9;
+    --pythonpad-cm-def: #8fbcbb;
+    --pythonpad-cm-bracket: #81a1c1;
+    --pythonpad-cm-tag: #bf616a;
+    --pythonpad-cm-header: #b48ead;
+    --pythonpad-cm-link: #b48ead;
+    --pythonpad-cm-error: #f8f8f0;
+}
+
+.Pythonpad {
+    padding-top: 0 !important;
+    border-left: 4px solid var(--primary-color);
+    border-radius: var(--code-block-border-radius);
+    background-color: var(--code-block-background);
+}
+
+.Pythonpad {
+    margin: 1.5rem 0;
+}
+
+.Pythonpad .Pythonpad__header {
+    display: none;
+}
+
+.Pythonpad .CodeMirror {
+    width: 80% !important;
+    height: auto;
+    padding: 1rem;
+    min-height: 100px;
+    background: none !important;
+}
+
+@media (max-width: 800px) {
+    .Pythonpad .CodeMirror {
+        font-size: 0.75rem;
+    }
+}
+
+.cm-s-nord .CodeMirror-gutters {
+    background: none !important;
+}
+
+.Pythonpad .CodeMirror .CodeMirror-scroll {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: initial;
+    overflow: hidden !important;
+}
+
+.Pythonpad .CodeMirror .CodeMirror-vscrollbar {
+    display: none !important;
+}
+
+.Pythonpad .columns .file-browser-column {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    z-index: 10;
+}
+
+.Pythonpad .columns .editor-column {
+    background: none;
+}
+
+@media (min-width: 1400px) {
+    .Pythonpad .columns .output-column {
+        position: absolute;
+        height: calc(100% - 2 * 1rem);
+        max-width: 40%;
+        right: -20%;
+        top: 1rem;
+        z-index: 1;
+    }
+}
+
+.Pythonpad .columns .output-column .message-box {
+    overflow-y: auto;
+}
+
+.Pythonpad .columns .output-column .input-row-box .input-box {
+    padding: 0 0.5rem !important;
+}
+
+.Pythonpad .columns .output-column .input-row-box.disabled {
+    display: none !important;
+}
+
+.Pythonpad .columns .output-column .input-row-box .input-row-inner-box {
+    background-color: var(--pythonpad-console-input-background);
+    /* border: 1px solid var(--mono-tint2); */
+}
+
+.Pythonpad .columns .output-column .input-row-box .input-row-inner-box input {
+    color: white;
+    /* color: var(--base-color); */
+    background: none;
+}
+
+.Pythonpad .toolbar-box.is-framed {
+    width: auto;
+}
+
+.Pythonpad .toolbar {
+    background: none !important;
+    /* background-color: var(--code-block-background) !important; */
+}
+
+/* @media (min-width: 1000px) {
+    .Pythonpad .toolbar .toolbar-side:last-child {
+        display: none;
+    }
+} */
+
+.Pythonpad .toolbar .toolbar-side:not(:first-of-type) {
+    padding-left: 0;
+}
+
+.Pythonpad
+    .toolbar
+    .toolbar-side:nth-child(2)
+    .toolbar-group:nth-child(1):not(:only-child) {
+    display: none;
+}
+
+@media (min-width: 1001px) {
+    .Pythonpad .toolbar .toolbar-side:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Pythonpad .columns .output-column.basic-mode {
+        display: none;
+    }
+
+    .Pythonpad .columns .output-column {
+        padding-bottom: 40px !important;
+    }
+}
+
+.Pythonpad .toolbar .toolbar-side .is-hidden-in-mobile {
+    display: none;
+}
+
+.Pythonpad .toolbar .tool-button.is-primary {
+    color: var(--base-background-color) !important;
+    background-color: var(--primary-color) !important;
+}
+
+.Pythonpad .columns .output-column .input-row-box .send-button {
+    color: var(--pythonpad-console-button-color);
+    background-color: var(--pythonpad-console-button-background);
+}
+
+.Pythonpad .columns .output-column .console {
+    background-color: var(--pythonpad-console-background);
+    border-radius: var(--pythonpad-console-border-radius);
+}
+
+@media (max-width: 1399px) {
+    .Pythonpad .columns .output-column .console {
+        border-radius: 0 var(--global-border-radius) var(--global-border-radius)
+            0;
+    }
+
+    .Pythonpad .columns .output-column .input-row-inner-box {
+        border-radius: 0 0 var(--global-border-radius) 0 !important;
+    }
+
+    .Pythonpad .columns .output-column .input-row-box .send-button {
+        border-radius: 0 0 var(--global-border-radius) 0 !important;
+    }
+
+    .Pythonpad .columns .output-column .console {
+        border-radius: 0 var(--global-border-radius) 0 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Pythonpad .columns .output-column .input-row-box .send-button {
+        border-radius: 0 !important;
+    }
+}
+
+.Pythonpad .columns .output-column .input-row-box {
+    bottom: -2.5rem;
+}
+
+@media (max-width: 480px) {
+    .Pythonpad .columns .output-column .input-row-box {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1001px) {
+    .Pythonpad .columns .output-column .output-container {
+        padding-bottom: 0;
+        padding-right: var(--pythonpad-console-border-radius);
+    }
+
+    .Pythonpad .columns .output-column .input-row-box::after {
+        content: "";
+        width: 100%;
+        background-color: var(--pythonpad-console-background);
+        position: absolute;
+        top: -8px;
+        height: var(--pythonpad-console-border-radius);
+        z-index: -1;
+    }
+}
+
+.Pythonpad .columns .output-column .input-row-box .send-button {
+    border-radius: 0 0 var(--pythonpad-console-border-radius);
+}
+
+.Pythonpad .columns .output-column .input-row-inner-box {
+    border-radius: 0 0 var(--pythonpad-console-border-radius)
+        var(--pythonpad-console-border-radius);
+}
+
+.Pythonpad .columns .output-column .console .console-text {
+    font-size: 0.75rem;
+    color: var(--base-color);
+}
+
+.Pythonpad .columns .output-column .console .console-text.system {
+    opacity: 0.33;
+}
+
+.Pythonpad .columns .output-column .console .console-text.error {
+    color: var(--danger-color);
+}
+
+.Pythonpad .toolbar .tool-button {
+    color: white !important;
+    background-color: var(--mono-tint1) !important;
+}
+
+.Pythonpad .toolbar .tool-button.is-warning {
+    color: var(--base-background-color) !important;
+    background-color: var(--primary-color) !important;
+}
+
+.Pythonpad .toolbar .tool-label.is-warning {
+    color: var(--primary-color) !important;
+}
+
+@media (max-width: 1000px) {
+    .Pythonpad .toolbar .tool-label span {
+        display: none;
+    }
+}
+
+.Pythonpad .toolbar .tool-button.is-danger {
+    color: white !important;
+    background-color: var(--danger-color) !important;
+}
+
+.Pythonpad .toolbar .tool-button:hover {
+    filter: brightness(110%) !important;
+}
+
+.Pythonpad .columns .output-column .input-row-box .send-button:hover {
+    filter: brightness(125%) !important;
+}
+
+.Pythonpad .toolbar .tool-button:active,
+.Pythonpad .columns .output-column .input-row-box .send-button:active {
+    filter: brightness(90%) !important;
+}

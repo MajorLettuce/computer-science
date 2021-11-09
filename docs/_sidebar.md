@@ -1,2 +1,4 @@
 - [Preface](/)
+- [Part 1. Introduction](/part/1/section/1)
 - [Table of Contents](/table-of-contents/index)
+- [Scratchpad](/scratchpad)
