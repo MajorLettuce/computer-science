@@ -221,3 +221,25 @@ a.tag.has-fa-icon .fa {
 blockquote .fa-terminal {
     font-size: 1.33rem;
 }
+
+@media (max-width: 30em) {
+    .markdown-section .table-wrapper thead {
+        display: table-header-group !important;
+    }
+    /* .markdown-section .table-wrapper thead tr {
+        display: table-row !important;
+    } */
+
+    .markdown-section .table-wrapper tbody tr {
+        display: table-row !important;
+    }
+    .markdown-section .table-wrapper tbody td {
+        display: table-cell !important;
+    }
+    .markdown-section .table-wrapper td {
+        padding: var(--table-cell-padding) !important;
+    }
+    .markdown-section .table-wrapper td::before {
+        display: none !important;
+    }
+}
